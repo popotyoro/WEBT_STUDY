@@ -1,0 +1,242 @@
+\documentclass[dvipdfmx]{beamer}
+\AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+\usetheme{Madrid}
+\title{バージョン管理の基本〜〜集中型と分散型}
+\author{鈴木耕介}
+\institute[]{}
+\date{2014/3/24}
+\usepackage{graphicx}
+
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usepackage[deluxe, expert]{otf}
+\setbeamertemplate{navigation symbols}{}1
+\AtBeginSection[]{
+    \frame{\tableofcontents[currentsection, hideallsubsections]} %目次スライド
+}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{はじめに}
+\begin{frame}{猫}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.5,bb=620 400 300 272]{img/cat.jpg}
+\end{figure}
+\end{center}
+\vspace{5cm}
+ヤバいにゃ・・・\\
+外部設計書\alert{間違って更新}しちゃったにゃ
+\end{frame}
+
+\begin{frame}{猫2}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=1.3,bb=320 160 0 0]{img/cat_angry.jpg}
+\end{figure}
+\end{center}
+\vspace{5cm}
+\alert{\huge{おう！早く直せよコラ！!}}\\	
+\end{frame}
+
+\begin{frame}{猫3}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.7,bb=590 230 0 0]{img/cat_sorry.jpg}
+\end{figure}
+\end{center}	
+\alert{すんません！\\直せません！\\ごめん寝！}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item \rm{\Huge{誰しもあるとおもいます}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item \rm{\Huge{今日はそんな悩みを解決してくれる
+バージョン管理システムについてお話します}}
+\end{itemize}
+\end{frame}
+
+\section{目的}
+\begin{frame}{目的}
+\begin{enumerate}
+\item \Large{バージョン管理システムの基礎を理解する}
+\pause
+\vspace{1.5cm}
+\item \Large{集中型と分散型の違いを理解する}
+\end{enumerate}
+\end{frame}
+
+\section{バージョン管理システムとは}
+\begin{frame}{基礎}
+\begin{enumerate}
+\item バージョン管理システム(VCS:Version Control System) \\
+\pause
+\begin{itemize}
+\item ファイルの作成日時・変更履歴・更新日時を\\
+リポジトリに保管し、管理すること \\
+\pause
+\item 主にソースコードの管理で使用されている
+\pause
+\end{itemize}
+\vspace{0.6cm}
+\item 代表的なバージョン管理ツールはこれ
+\pause
+\begin{itemize}
+\item CVS \\
+--- VCSの火付け役。お客さんはコレ使ってる\uncover<8->{\alert{[集中型]}}
+\vspace{3mm}
+\pause
+\item Subversion \\
+--- CVSの後継機的ポジション。WEBチームはコレ使ってる\uncover<8->{\alert{[集中型]}}
+\vspace{3mm}
+\pause
+\item Git \\
+--- 従来のツールとは違うポジション。最近の主流はコレ\uncover<8->{\alert{[分散型]}}
+
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\section{集中型と分散型の違い}
+\begin{frame}{仕組み(集中型)}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.4,bb=650 290 0 0]{img/VCS_flow.pdf}
+\end{figure}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=2.5,bb=150 70 0 0]{img/ATM.jpg}
+\end{figure}
+\end{center}
+\vspace{1cm}
+\color{green}\huge{銀行のATMみたいなものです}
+\end{frame}
+
+\begin{frame}{集中型の特徴(弱点)}
+\begin{enumerate}
+\item 手元に最新版(現在の状況)しかない
+\pause
+\vspace{1.5cm}
+\item 変更履歴を問い合わせるには中央リポジトリに問い合わせる必要がある。
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\Huge{\alert{もしもリポジトリと\\
+接続ができない状態になってしまったら・・・？}}
+\end{frame}
+
+\begin{frame}{ショック}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.8,bb=460 80 0 0]{img/shock.jpg}
+\end{figure}
+\end{center}
+\vspace{-7cm}
+\alert{\huge{残高がわからないじゃない！}}
+\end{frame}
+
+\begin{frame}{集中型の特徴(弱点)}
+\begin{enumerate}
+\item \huge{常に中央リポジトリの接続している必要があります}
+\pause
+\vspace{1cm}
+\item \huge{当然中央リポジトリがお亡くなりになったら\alert{OUT}}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{仕組み(分散型)}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=0.32,bb=650 400 0 0]{img/DVCS_flow.pdf}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}{}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=1,bb=600 320 0 0]{img/safeBox.jpg}
+\end{figure}
+\end{center}
+\vspace{6cm}
+\color{blue}\huge{各々が自分専用の銀行を所持しているようなもんです}
+\end{frame}
+
+\begin{frame}{分散型の特徴}
+\begin{enumerate}
+\item 一時的作業の履歴管理が容易
+\pause
+\vspace{1.5cm}
+\item オフライン環境でも開発を進められる
+\end{enumerate}
+\end{frame}
+
+\section{まとめ}
+\begin{frame}{強弱まとめ} \huge{最後に分散型の\\
+全般的なメリデメをご紹介します}
+\end{frame}
+
+\begin{frame}{強弱まとめ(分散型視点)}
+\begin{enumerate}
+\item 強み
+\begin{itemize}
+\item<2-> 一時的作業の履歴管理が容易
+\item<2-> 柔軟なワークフロー
+\item<2-> パフォーマンスとスケーラビリティ
+\item<2-> オフラインによる開発
+\item<2-> 障害に強い
+\end{itemize}
+\vspace{0.5cm}
+\item 弱み
+\begin{itemize}
+\item<3-> 管理が煩雑
+\item<3-> ロックができない(楽観的ロック)
+\item<3-> 細かいアクセス制御ができない
+\item<3-> 有識者が少ない
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{まとめ}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=2.5,bb=180 90 0 0]{img/money.jpg}
+\end{figure}
+\end{center}
+\vspace{5cm}
+\color{white}\huge{偉い人曰く、お金と時間に余裕があるならGitに変えることもアリだと}
+\end{frame}
+
+\begin{frame}{参考}
+\begin{enumerate}
+\item {text}入門git Travis Swicegood オーム社
+\item ガチで5分で分かる分散型バージョン管理システムGit \\ \href{http://www.atmarkit.co.jp/ait/articles/1307/05/news028.html}
+{http://www.atmarkit.co.jp/ait/articles/1307/05/news028.html}
+
+\item 分散バージョン管理Git/Mercurial/Bazaar徹底比較 \\
+\href{http://www.atmarkit.co.jp/ait/articles/0901/14/news133.html}
+{http://www.atmarkit.co.jp/ait/articles/0901/14/news133.html}
+\end{enumerate}
+%http://www.atmarkit.co.jp/ait/articles/1307/05/news028.html
+%http://www.atmarkit.co.jp/ait/articles/0901/14/news133.html
+\end{frame}
+
+\begin{frame}{あとづけ}
+\begin{enumerate}
+\item スイマセンまだGitの勉強始めたばかりなのです。
+\item Githubも合わせて勉強しています。
+\item ちなみにこのスライドはtexファイルで作成してみました。
+\end{enumerate}
+\end{frame}
+\end{document}

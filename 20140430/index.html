@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="jp">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>今日から使える？便利ツール100選(嘘)</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="K.Suzuki">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>今日から使える？</h2>
+                    <h3>鈴木おすすめツール&サイト</h3>
+					<p>
+						<small>Created by K.Suzuki</small>
+					</p>
+				</section>
+
+				<section>
+					<h1>こんにちは！</h1>
+				</section>
+                
+                <section>
+					<h2>もう５月ですね！</h2>
+				</section>
+                
+                <section>
+					<h2>鈴木連続発表も第２回目になりました！</h2>
+                    <h3 class="fragment">若干しんどい(汗)</p></h3>
+				</section>
+                
+                <section>
+					<h3>今回は技術うんぬんの話ではなく</h3>
+                    <h3>便利なツール&サイトをご紹介します</h3>
+				</section>
+            
+                <section>
+					<h3>ふ〜ん</h3>
+                    <h3 class="fragment">へぇ〜</h3>
+                    <h3 class="fragment">こんなのがあるんだ〜</h3>
+                    <h2 class="fragment">って思っていただければ私の勝ち！</h2>
+				</section>
+            
+                <section>
+					<h3>ふ〜ん</h3>
+                    <h3 class="fragment">へぇ〜</h3>
+                    <h3 class="fragment">・・・で？</h3>
+                    <h2 class="fragment">ってなったら泣く   ！</h2>
+				</section>
+            
+                <section>
+					<h2>それではよろしくお願いします</h2>
+                    <br>
+                    <h3>随時質問OKです</h3>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>おしながき</h2>
+						<p>
+							今日ご紹介するツール&サイトは <a href="#" class="navigate-down">こちら</a>.
+						</p>
+					</section>
+					<section data-background="#007777">
+						<h2>MarkDown</h2>
+						<p> 軽量なマークアップ言語  </p>
+					</section>
+					<section data-background="#8c4738">
+						<h2>Reveal.js</h2>
+						<p>プレゼンテーションテンプレート</p>
+					</section>
+					<section data-background="#008000">
+						<h2>Bracekts</h2>
+						<p>テキストエディタ</p>
+						
+					</section>
+                    <section data-background="#adbb00">
+                        <h2>Qiita</h2><br><br>
+                        <p>プログラミング知識を共有するサイト</p>
+                        
+                    </section>
+				</section>
+            
+                <section data-background="#007777">
+                    <section>
+						<h1>MarkDown</h1>
+                    </section>
+                    <section>
+                        <h2>MarkDownとは？</h2>
+                    </section>
+                    <section>
+                        <p align="left">MarkDownとは？</p>
+                        <br>
+                        <blockquote>    
+						  &ldquo;「書きやすくて読みやすいプレーンテキストとして記述した文書を、妥当なXHTML（もしくはHTML）文書へと変換できるフォーマット」として、ジョン・グル―バー（英語版）により作成された。&rdquo;
+					   </blockquote>
+                        <div align="right"><a href="http://ja.wikipedia.org/wiki/Markdown">MarkDown/Wikipedia</a></div>
+                    </section>
+                    
+                    <section>
+                        <p align="left">用は</p>
+                        <p>指定された形式で記述すると</p>
+                        <pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+# タイトル
+===
+* アイテム１
+* アイテム２
+                        </code></pre>
+                        <p class="fragment">HTMLとして出力してくれる</p>
+                        <pre class="fragment"><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<h1>タイトル</h1>
+<hr />
+<ul>
+    <li>アイテム１</li>
+    <li>アイテム２</li>
+</ul>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>使い方</h2>
+                    </section>
+                    <section>
+                        <p align="left">使い方</p>
+                        <br>
+                        <h3>エディタを選ぶだけ</h3>
+                        <ul>
+                            <li><a href="http://cloose.github.io/CuteMarkEd/">CuteMarkEd</a></li>
+                            <li><a href="https://stackedit.io/">StackEdit</a></li>
+                            <li>etc...</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>使用例</h2>
+                    </section>
+                    <section>
+                        <p align="left">CuteMarkEd</p>
+                        <a href="lib/photo/example_markdown.png" class="image">
+						<img  src="lib/photo/example_markdown.png" alt="Meny">
+					   </a>
+                    </section>
+                    <section>
+                        <p align="left">CuteMarkEd</p>
+                        <ul>
+                            <li>オープンソースエディタ</li>
+                            <li>インストール形式</li>
+                            <li>リファレンスも完備してあるため初心者も安心</li>
+                            <li>HTML/PDFにエクスポート可能</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <p align="left">StackEdit</p>
+                        <a href="lib/photo/example_stack.png" class="image">
+						<img  src="lib/photo/example_stack.png" alt="Meny">
+					   </a>
+                    </section>
+                    <section>
+                        <p align="left">StackEdit</p>
+                        <ul>
+                            <li>オープンソースエディタ</li>
+                            <li>WEBで作成できる</li>
+                            <li>GoogleDrive, Evernote, Dropboxと同期可能</li>
+                            <li>英語読めないと辛いかな</li>
+                        </ul>
+                    </section>
+                    
+                </section>
+                
+                <section data-background="#8c4738">
+                    <section>
+                        <h1>reveal.js</h1>
+                    </section>
+                     <section>
+                        <h2>reveals.jsとは？</h2>
+                    </section>
+                    <section>
+                        <p align="left">reveal.jsとは？</p>
+                        <br>
+                        CSS3のアニメーションとJavaScriptを組み合わせて作成した<p class="fragment grow">オシャレな</p>
+                        プレゼン用ライブラリ
+                    </section>
+                    <section>
+                        <h2>使い方</h2>
+                    </section>
+                    <section>
+                        <p align="left">使い方</p>
+                        <br>
+                        <h3>ライブラリをダウンロードするだけ</h3>
+                        <p><a href="https://github.com/hakimel/reveal.js/">GitHubから</a></p>
+                    </section>
+                    
+                    <section>
+                    <h2>使用例</h2>
+                    </section>
+                    <section>
+                    <p align="left">使用例</p>
+                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<h2>Transition Styles</h2>
+<p>
+    <a href="?transition=cube#/revealExample">Cube</a> -
+    <a href="?transition=page#/revealExample">Page</a> -
+    <a href="?transition=concave#/revealExample">Concave</a> -
+    <a href="?transition=zoom#/revealExample">Zoom</a> -
+    <a href="?transition=linear#/revealExample">Linear</a> -
+    <a href="?transition=fade#/revealExample">Fade</a> -
+    <a href="?transition=none#/revealExample">None</a> -
+    <a href="?#/revealExample">Default</a>
+</p>
+<br>
+<h2>Themes</h2>
+<p>
+    <a href="?#/revealExample">Default</a> -
+    <a href="?theme=sky#/revealExample">Sky</a> -
+    <a href="?theme=beige#/revealExample">Beige</a> -
+    <a href="?theme=simple#/revealExample">Simple</a> -
+    <a href="?theme=serif#/revealExample">Serif</a> -
+    <a href="?theme=night#/revealExample">Night</a> <br>
+    <a href="?theme=moon#/revealExample">Moon</a> -
+    <a href="?theme=solarized#/revealExample">Solarized</a>
+</p>				
+                        </code></pre>
+                        
+                    </section>
+                    <section id="revealExample">
+                        <p align="left">使用例</p>
+					   <h2>Transition Styles</h2>
+                        <p>
+                            <a href="?transition=cube#/revealExample">Cube</a> -
+                            <a href="?transition=page#/revealExample">Page</a> -
+                            <a href="?transition=concave#/revealExample">Concave</a> -
+                            <a href="?transition=zoom#/revealExample">Zoom</a> -
+                            <a href="?transition=linear#/revealExample">Linear</a> -
+                            <a href="?transition=fade#/revealExample">Fade</a> -
+                            <a href="?transition=none#/revealExample">None</a> -
+                            <a href="?#/revealExample">Default</a>
+                        </p>
+                        <br>
+                        <h2>Themes</h2>
+                        <p>
+                            <a href="?#/revealExample">Default</a> -
+                            <a href="?theme=sky#/revealExample">Sky</a> -
+                            <a href="?theme=beige#/revealExample">Beige</a> -
+                            <a href="?theme=simple#/revealExample">Simple</a> -
+                            <a href="?theme=serif#/revealExample">Serif</a> -
+                            <a href="?theme=night#/revealExample">Night</a> <br>
+                            <a href="?theme=moon#/revealExample">Moon</a> -
+                            <a href="?theme=solarized#/revealExample">Solarized</a>
+                        </p>				
+				    </section>
+                </section>
+            
+                <section data-background="#008000">
+                    <section>
+						<h1>Brackets</h1>
+                    </section>
+                    <section>
+                    <h2>Bracketsとは？</h2>
+                    </section>
+                    <section>
+                    <p align="left">Bracketsとは？</p><br>
+                        <p align="left">　正式名称「Adobe Brackets」</p>
+                        <p align="left">　Adobe が無償で公開しているテキストエディタ</p>
+                        <p align="left">　主要ターゲット言語は</p>
+                        <ul>
+                            <li class="fragment highlight-blue">HTML</li>
+                            <li class="fragment highlight-red">CSS</li>
+                            <li class="fragment highlight-green">JavaScript</li>
+                        </ul>
+                    </section>
+                    <section>
+                    <p align="left">特徴</p><br>
+                        <ul>
+                            <li class="fragment">Node.jsが同梱</li>
+                            <li class="fragment">ライブプレビュー機能</li>
+                            <li class="fragment">CSSクイック編集機能</li>
+                            <li class="fragment">豊富な拡張機能</li>
+                        </ul>
+                    </section>
+                    <section>
+                    <h2>使い方</h2>
+                    </section>
+                    <section>
+                        <p align="left">使い方</p><br>
+                        <h3>インストールするだけ</h3>
+                    </section>
+                    <section>
+                        <h2>使用例</h2>
+                    </section>
+                    <section>
+                        <p align="left">使用例</p><br>
+                        <a href="lib/photo/example_brackets01.png" class="image">
+						<img  src="lib/photo/example_brackets01.png" alt="Meny">
+					   </a>
+                    </section>
+                    <section>
+                        <p align="left">使用例</p><br>
+                        <a href="lib/photo/example_brackets02.png" class="image">
+						<img  src="lib/photo/example_brackets02.png" alt="Meny">
+					   </a>
+                    </section>
+                    <section>
+                    <h2>WEBチームの皆さん</h2>
+                    </section>
+                    <section>
+                    <h2>紙芝居の作成にめっちゃ役立ちそうって思った？</h2>
+                    </section>
+                    <section data-background="lib/photo/sorry.jpg">
+                    <h1>残念！</h1>
+                    </section>
+                    <section>
+                    <h3 class="fragment shrink">Shift-JIS非対応</h3>
+                    </section>
+                </section>
+            
+                <section data-background="#adbb00"> 
+                    <section>
+                        <h1>qiita</h1>
+                    </section>
+                    <section>
+                        <h2>qiitaとは？</h2>
+                    </section>
+                    <section>
+                        <p align="left">Qiitaとは？</p>
+                        <br>
+                        <p>「プログラミングに関する知識を記録、<br>共有する最適なサービス」</p>
+                    </section>
+                    <section>
+                        <p align="left">特徴</p>
+                        <ul>
+                            <li>MarkDown記法で表現</li>
+                            <li>多くのプログラマーによるフィードバック</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>使用例</h2>
+                    </section>
+                    <section>
+                        <p align="left">使用例</p>
+                        <a href="lib/photo/qiita_search.png" class="image">
+						<img  src="lib/photo/qiita_search.png" alt="Meny">
+					   </a>
+                    </section>
+                    <section>
+                        <p align="left">使用例</p>
+                        <a href="lib/photo/qiita_cobol.png" class="image">
+						<img  src="lib/photo/qiita_cobol.png" alt="Meny">
+					   </a>
+                    </section>
+                </section>
+            
+				<section>
+                    <h2>以上です</h2>
+                </section>
+                <section>
+                    <h2>いかがでしたか？</h2>
+                </section>
+                <section data-background="lib/photo/fight.jpg">
+                    <br><br>
+                    <h2>ムムムってくるものがアレばハッピーです</h2></h2>
+                </section>
+				<section>
+					<h1>THE END</h1>
+					<h3>BY K.Suzuki</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

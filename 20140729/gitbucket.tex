@@ -1,0 +1,245 @@
+\documentclass[dvipdfmx]{beamer}
+\AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+\usetheme{Madrid}
+\title{GitHub(Gitbucket)でできること}
+\author{鈴木耕介}
+\institute[]{}
+\date{2014/7/29}
+\usepackage{graphicx}
+\usepackage{ulem}
+
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usepackage[deluxe, expert]{otf}
+
+\AtBeginSection[]{
+    \frame{\tableofcontents[currentsection, hideallsubsections]} %目次スライド
+}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{はじめに}
+\begin{frame}{}
+\begin{center}
+{\Huge みんな
+お久しぶり！！}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{Huge}
+ところでみんな・・
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[scale=0.5,bb=620 400 300 272]{lib/photo/oni.jpg}
+\end{figure}
+
+\begin{center}
+\begin{Huge}
+\textbf{\color{red}コード書いてる？？}
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\includegraphics[scale=0.35,bb=920 600 300 272]{lib/photo/aooni.jpg}
+\end{figure}
+
+\begin{center}
+\vspace{4cm}
+\begin{Huge}
+\textbf{\color{red}ぼくは書いてません}
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{Huge}
+コードレビューしてる(してもらってる)？？
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\begin{Huge}
+してないorしてもらってない\\
+そこの貴方
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+
+\begin{Huge}
+コード書ける力は絶対に上がりません！(偉そう)
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\Large{今日は自分が書いたコードの風通しを良くしてくれるモノをご紹介}
+\end{frame}
+
+
+\section{GitHubとは？}
+\begin{frame}{GitHubって？}
+\begin{figure}
+\includegraphics[scale=0.5,bb=20 20 30 72]{lib/photo/github.png}
+\end{figure}
+\begin{enumerate}
+\item \Large{GitHub}
+
+\begin{itemize}
+\item 同期、他人、プロジェクトメンバーとコードを共有するための場所(Gitリポジトリ)
+を提供しているサービス
+\vspace{1cm}
+\item 付随する各種サービスがすんばらしぃぃぃ！(後で説明)
+\end{itemize}
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{GitHubが提供する機能}
+
+\begin{enumerate}
+\item \Large{Gitリポジトリ}
+\begin{itemize}
+\item Gitの説明は前前前前回くらいにやったので略
+\vspace{1cm}
+\item 社内に公開を制限するサービスも提供している
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{GitHubが提供する機能}
+\begin{enumerate}
+\item \Large{Issue}
+\begin{itemize}
+\item タスク管理機能
+\vspace{1cm}
+\item バグ管理やチケット駆動開発のような使い方もできる
+\vspace{1cm}
+\item Issueとコミットを紐付けることができる
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{GitHubが提供する機能}
+\begin{enumerate}
+\item \Large{Wiki}
+\begin{itemize}
+\item その名の通りWiki機能
+\vspace{1cm}
+\item 開発ルールやマニュアルなど記載できる
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{GitHuGitHubが提供する機能}
+\begin{enumerate}
+\item \Large{Pull Request}
+\begin{itemize}
+\item AさんがpushしたものをBさんに取り込み要求できる機能
+\vspace{1cm}
+\item BさんはAさんがpushしたコードの差分を比較・議論ができる
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{GitHubが提供する機能}
+\begin{center}
+\begin{Huge}
+どうですかみなさん？ \\
+この便利な機能を分かっていただけました？
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}{GitHubが提供する機能}
+\includegraphics[scale=0.9,bb=20 168 30 172]{lib/photo/nonomura.jpg}
+\begin{Huge}
+えっ？\\
+分からん？
+\end{Huge}
+\end{frame}
+
+\begin{frame}{GitHubが提供する機能}
+\begin{center}
+\begin{Huge}
+実際に動かしてみましょう
+\end{Huge}
+\end{center}
+\end{frame}
+
+\section{Gitbucketを使ってデモをする}
+
+\begin{frame}{Gitbucketって？}
+\begin{enumerate}
+\item 今回は諸事情によりGitbucketを使います
+\begin{itemize}
+\item GitHubの\sout{パクリ}Clone
+\vspace{1cm}
+\item OSSでjavaだけで動く
+\end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\section{まとめ}
+\begin{frame}{まとめ}
+\begin{center}
+\begin{Huge}
+いかかでしたか？
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}{まとめ}
+\begin{center}
+\begin{Huge}
+使ってみたくなってきたでしょう？
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}{まとめ}
+\begin{center}
+\begin{Huge}
+javaで動くので明日から現場で実践可能ですよ！
+\end{Huge}
+\end{center}
+\end{frame}
+
+\begin{frame}{まとめ}
+\begin{enumerate}
+\pause
+\item \Large{Gitでソース管理}
+\pause
+\vspace{1cm}
+\item \Large{コードを見るor見てもらう}
+\pause
+\vspace{1cm}
+\item \Large{簡単なタスク管理として使う}
+
+\pause
+\begin{figure}
+\includegraphics[scale=1.0,bb=20 10 40 117]{lib/photo/githubNeko.png}
+\end{figure}
+\vspace{-3cm}
+\Huge{\color{red}G O O D！}
+\end{enumerate}
+
+
+
+\end{frame}
+
+\end{document}

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="jp">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Google Guava 使ってみた</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="K.Suzuki">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+        
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Google Guava</h2>
+                    <br/>
+                    <h3>これ便利？</h3>
+					<p>
+						<small>Created by K.Suzuki</small>
+					</p>
+				</section>
+
+				<section>
+					<h1>こんにちは！</h1>
+				</section>
+                
+                <section>
+					<h2>もう６月ですね！</h2>
+				</section>
+                
+                <section>
+					<h2>鈴木連続発表も第<b style="color:red">3</b>回目になりました！</h2>
+                    <h3 class="fragment">.....</h3>
+                    <h3 class="fragment">飽きた？</h3>
+				</section>
+                
+                <section>
+                    <h2>こ、今月は大丈夫！</h2><br/>
+                    <h2 class="fragment">皆さん大好き(？)</h2><br/>
+                    <h2 class="fragment"><b style="color:red">Java</b>のお話だよ！</h2>
+                </section>
+                
+                <section>
+					<h2>ということで今回は</h2>
+                </section>
+                <section data-background="lib/photo/Chrome.png">
+                    <h2>Goole先生作成</h2>
+                    <h2 class="fragment">便利なライブラリ</h2><br/>
+                    <h1 class="fragment"><b style="color:blue">G</b><b style="color:red">o</b><b style="color:yellow">o</b><b style="color:blue">g</b><b style="color:green">l</b><b style="color:red">e</b> <b>Guava</b></h1>
+				</section>
+            
+                <section>
+					<h2>ライブラリの紹介なので</h2><br/>
+                    <h3 class="fragment">今日のお話を全部覚える必要は</h3><br/>
+                    <h1 class="fragment"><b>なし！</b></h1>
+				</section>
+                
+                <section>
+					<h2>必要な時が来たら</h2><br/>
+                    <h3 class="fragment">「あれ？そういえば鈴木<span style="color:blue">(笑)</span>が<br/>この前…」</h3><br/>
+                    <h1 class="fragment"><b>それだけで<b>OK！</b></b></h1>
+				</section>
+            
+                <section>
+					<h2>よろしくどうぞ</h2>
+                    <br>
+                    <h3>随時質問OKです</h3>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+                    <h2><p align=left>おしながき</p></h2><br/>
+                    <ul>
+                        <li>Introduction</li>
+                        <li>Libraries</li>
+                        <li>Sample</li>
+                    </ul>
+				</section>
+                
+                <section>
+                    <section>
+                        <h1>Introduction</h1>        
+                    </section>
+                    
+                    <section>
+                        <h3 align="left">Google Guavaって？</h3><br/>
+                        <ul>
+                            <li class="fragment">Googleが開発しているOSSのコアライブラリ</li>
+                            <li class="fragment">特に新しい機能は<span style="color:red">持っていない</span></li>
+                            <li class="fragment">普段記述してるコードを<span style="color:blue">簡素化できる</span><br/>
+                            (ぬるぽチェックとか！)</li>
+                        </ul>
+                    </section>
+                    <section>
+                    <h1>兎に角<br/>みてみましょ</h1>
+                    </section>
+                </section>
+                
+                
+                <section>
+                <h1>Libraries</h1>
+                </section>
+                <section>
+                    <section>
+                    <h2>Collection</h2>
+                    </section>
+                        
+                    <section>
+                        <h2><p align=left>Collection</p></h2>
+                        <h3><p align=left>　MultiSet</h3>
+                        <pre><code data-trim contenteditable>
+Multiset< String > wordsSet = HashMultiset.create();
+wordsSet.add("Suzuki");
+wordsSet.add("Sato");
+wordsSet.add("Takahashi");
+wordsSet.add("Suzuki");
+        
+// 「Suzuki」が含まれる数を返す
+int count = wordsSet.count("Suzuki");
+System.out.println("Suzukiの数は　" + count);
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+              Suzukiの数は　2
+        </code></pre>  
+                         </div>
+                    </section>
+                
+                    <section>
+                        <h2><p align=left>Collection</p></h2>
+                        <h3><p align=left>　MultiMap</h3>
+                        <pre><code data-trim contenteditable>
+Multimap< String, String > nameMap = ArrayListMultimap.create();
+nameMap.put("Suzuki", "Kosuke");
+nameMap.put("Suzuki", "Ichiro");
+nameMap.put("Suzuki", "Shiro");
+// 取り出し
+System.out.println(Arrays.asList(nameMap.get("Suzuki").toArray()).get(1));
+
+// 従来
+Map< String,List< String > > nameMapOld = new HashMap< String, List< String > >();
+
+if(keyが存在するなら){
+    nameMapOld.get("key").add("value");
+}else{
+    nameMapOld.put("key", new ArrayList< String >());
+}
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+              Ichiro
+        </code></pre>  
+                         </div>
+                    </section>
+                    
+                    <section>
+                        <h2><p align=left>Collection</p></h2>
+                        <h3><p align=left>　Table</h3>
+                        <pre><code data-trim contenteditable>
+Table< String, String, String > nameTable = HashBasedTable.create();
+
+nameTable.put("Man", "Suzuki", "Kosuke");
+nameTable.put("Woman", "Suzuki", "Kouko");
+nameTable.put("Man", "Sato", "Toshi");
+System.out.println(nameTable.row("Man"));
+System.out.println(nameTable.column("Suzuki"));
+System.out.println(nameTable.row("Man").get("Sato"));
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+{Suzuki=Kosuke, Sato=Toshi}
+{Man=Kosuke, Woman=Kouko}
+Toshi
+        </code></pre>  
+                         </div>
+                    </section>
+                    
+                    <section>
+                        <h2><p align=left>Collection</p></h2>
+                        <h3><p align=left>　Table</h3>
+                        <pre><code data-trim contenteditable>
+RangeMap< Integer, String > rangeMap = TreeRangeMap.create();
+rangeMap.put(Range.closed(1, 10), "SuzukiZone");
+rangeMap.put(Range.open(3, 5), "SatoZone");
+
+System.out.println(rangeMap.get(4));
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+SatoZone
+        </code></pre>  
+                         </div>
+                    </section>
+                </section>
+                
+                <section>
+                    <section>
+                    <h2>Base</h2>
+                    </section>
+                        
+                    <section>
+                        <h2><p align=left>Base</p></h2>
+                        <h3><p align=left>　Optional</h3>
+                        <pre><code data-trim contenteditable>
+Optional< String > name = Optional.of("Suzuki");
+System.out.println(name.get());
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+              Suzuki
+        </code></pre>  
+                         </div>
+                    </section>
+                
+                    <section>
+                        <h2><p align=left>Base</p></h2>
+                        <h3><p align=left>　String</h3>
+                        <pre><code data-trim contenteditable>
+ String bbb = null;
+// NULLぽチェック
+System.out.println("null is " + Strings.isNullOrEmpty(bbb));
+bbb = "";
+System.out.println("blank is " + Strings.isNullOrEmpty(bbb));
+bbb = Strings.repeat("?", 10);
+System.out.println(bbb);
+bbb = Strings.padStart("1", 3, '0');
+System.out.println(bbb);
+bbb = Strings.padEnd("abc", 5, '#');
+System.out.println(bbb);
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+null is true
+blank is true
+??????????
+001
+abc##
+        </code></pre>  
+                         </div>
+                    </section>
+                    
+                    <section>
+                        <h2><p align=left>Base</p></h2>
+                        <h3><p align=left>　Joinner</h3>
+                        <pre><code data-trim contenteditable>
+Joiner joiner = Joiner.on("; ").skipNulls();
+System.out.println(joiner.join("Suzuki","Sato", "Takahashi"));
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+Suzuki; Sato; Takahashi
+        </code></pre>  
+                         </div>
+                    </section>
+                    
+                    <section>
+                        <h2><p align=left>Base</p></h2>
+                        <h3><p align=left>　Splitter</h3>
+                        <pre><code data-trim contenteditable>
+bbb = "Suzuki Kosuke;27";
+CharMatcher matcher = CharMatcher.WHITESPACE.or(CharMatcher.is(';'));
+System.out.println(Splitter.on(matcher).split(bbb));
+        </code></pre>
+                         <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+[Suzuki, Kosuke, 27]
+        </code></pre>  
+                         </div>
+                    </section>
+                    
+                    <section>
+                        <h2><p align=left>Base</p></h2>
+                        <h3><p align=left>　Object</h3>
+                        <pre><code data-trim contenteditable>
+System.out.println(Objects.equal("aaa", "aaa"));
+System.out.println(Objects.equal(null, "aaa"));
+        </code></pre>
+        <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+true
+false
+        </code></pre>  
+        </div>
+                    </section>
+                    
+                    <section>
+                        <h2><p align=left>Base</p></h2>
+                        <h3><p align=left>　Preconditon</h3>
+                        <pre><code data-trim contenteditable>
+bbb = null;
+try {
+    Preconditions.checkNotNull(bbb, "bbb is null", bbb);
+} catch (Exception e) {
+    e.printStackTrace();
+}
+        </code></pre>
+        <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+              java.lang.NullPointerException: bbb is null [null]
+        </code></pre>  
+        </div>
+                    </section>
+                    
+                    <section>
+                        <h2><p align=left>Base</p></h2>
+                        <h3><p align=left>　Primitives</h3>
+                        <pre><code data-trim contenteditable>
+
+int[] numbers = new int[]{1,2,3};
+List< Integer > lists = Ints.asList(numbers);
+int max = Ints.max(numbers);
+System.out.println(max);
+        </code></pre>
+        <div class=fragment>
+        <h4 align=left>　実行結果</h4>
+              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+3
+        </code></pre>  
+        </div>
+                    </section>
+                    
+                </section>
+            
+               
+            
+				<section>
+                    <h2>以上です</h2>
+                </section>
+                <section>
+                    <h2>いかがでしたか？</h2>
+                </section>
+                <section>
+                    <br><br>
+                    <h2>今回紹介したのは<br/>ほんの一部です</h2>
+                </section>
+                <section>
+                    <br><br>
+                    <h2>詳しくはWEBで</h2></h2>
+                </section>
+                <section data-background="lib/photo/sorry.jpg">
+                    <br><br>
+                    <h2>すいません。<br/>今回は勘弁してください！</h2>
+                </section>
+				<section>
+					<h1>THE END</h1>
+					<h3>BY K.Suzuki</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
